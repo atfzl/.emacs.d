@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: angularjs
+# key: angularjs
+# binding: direct-keybinding
+# --
+<script src="bower_components/angular/angular.min.js"></script>

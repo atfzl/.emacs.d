@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: jquery
+# key: jquery
+# binding: direct-keybinding
+# --
+<script src="bower_components/jquery/dist/jquery.min.js"></script>

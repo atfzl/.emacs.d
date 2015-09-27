@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: react
+# key: react
+# binding: direct-keybinding
+# --
+<script src="bower_components/react/react.js"></script>

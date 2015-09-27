@@ -1,0 +1,14 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: html
+# key: html
+# binding: direct-keybinding
+# --
+<!doctype HTML>
+<html>
+  <head>
+    <title>$1</title>
+  </head>
+  <body>
+    $0
+  </body>
+</html>
