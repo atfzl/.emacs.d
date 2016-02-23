@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: query
+# key: query
+# binding: direct-keybinding
+# --
+var query = P.promisify(::(mysql.createConnection(mysqlConfig)).query);

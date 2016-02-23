@@ -1,8 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: main
-# key: main
+# name: arg
+# key: arg
 # binding: direct-keybinding
 # --
-if (require.main == module) {
-  $0 
-}
+arguments

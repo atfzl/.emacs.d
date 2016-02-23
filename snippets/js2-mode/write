@@ -3,4 +3,4 @@
 # key: write
 # binding: direct-keybinding
 # --
-process.stdout.write($0);
+write($0);

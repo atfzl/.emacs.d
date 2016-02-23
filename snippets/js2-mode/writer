@@ -1,8 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: main
-# key: main
+# name: writer
+# key: writer
 # binding: direct-keybinding
 # --
-if (require.main == module) {
-  $0 
-}
+var write = process.stdout.write.bind(process.stdout);

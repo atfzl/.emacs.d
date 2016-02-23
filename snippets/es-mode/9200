@@ -1,8 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: main
-# key: main
+# name: 9200
+# key: 9200
 # binding: direct-keybinding
 # --
-if (require.main == module) {
-  $0 
-}
+http://localhost:9200/

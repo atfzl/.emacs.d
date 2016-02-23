@@ -1,8 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: main
-# key: main
+# name: exit
+# key: exit
 # binding: direct-keybinding
 # --
-if (require.main == module) {
-  $0 
-}
+process.exit();
