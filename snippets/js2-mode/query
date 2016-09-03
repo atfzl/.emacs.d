@@ -3,4 +3,15 @@
 # key: query
 # binding: direct-keybinding
 # --
-var query = P.promisify(::(mysql.createConnection(mysqlConfig)).query);
+import P from 'bluebird';
+import _ from 'lodash';
+import mysql from 'mysql';
+
+let mysqlConfig = {
+  host: 'localhost',
+  user: 'root',
+  password: 'paytm@197',
+  database: 'mktplace'
+};
+let conn = mysql.createConnection(mysqlConfig);
+let query = P.promisify(::conn.query);

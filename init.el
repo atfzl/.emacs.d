@@ -1,3 +1,7 @@
+;;; init.el --- general
+;;; Commentary:
+;;; Some general Emacs window settings
+
 ;;(setq debug-on-error t)
 ;; basic --------------------------------------------
 ;;disable scroll bar and tool bar and menu bar
@@ -18,9 +22,12 @@
 
 (setq make-backup-files nil)
 
-(global-set-key (kbd "C-d") 'backward-delete-char-untabify)
+(global-set-key (kbd "C-j") 'backward-delete-char-untabify)
 
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+(eval-after-load "org"
+  '(require 'ox-md nil t))
 
 ;; server
 (server-start)
@@ -40,6 +47,9 @@
 ;; execute path from shell
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+;;(require 'nvm)
+;;(nvm-use "6.0.0")
 
 ;; show line numbers globally      
 (global-linum-mode 1)
@@ -66,17 +76,19 @@
                 "setInterval" "clearInterval" "console" "JSON" "process"
                 "define" "__dirname"))
 
-(add-to-list 'auto-mode-alist '("\\.js\\'"         . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.es6\\'"        . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'"         . web-mode))
+(add-to-list 'auto-mode-alist '("\\.es\\'"         . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'"       . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css\\'"        . web-mode))
 (add-to-list 'auto-mode-alist '("\\.rest\\'"       . restclient-mode))
-(add-to-list 'auto-mode-alist '("\\.es\\'"         . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.art\\'"        . artist-mode))
 (add-to-list 'auto-mode-alist '("\\.zsh\\'"        . sh-mode))
 (add-to-list 'auto-mode-alist '("\\.zsh-theme\\'"  . sh-mode))
 (add-to-list 'auto-mode-alist '("\\.handlebars\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx$"          . web-mode))
+
+(add-hook 'scss-mode-hook 'rainbow-mode)
+(add-hook 'css-mode-hook 'rainbow-mode)
 
 ;; open files by M-x
 (defun gtd ()
@@ -109,6 +121,11 @@
   (find-file "~/org/books.org")
   )
 
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-iswitchb)
+
 ;; refresh buffers automatically if changed by ext program
 (global-auto-revert-mode 1)
 
@@ -119,7 +136,6 @@
 ;; load custom theme
 ;;(load-theme 'base16-monokai-dark t)
 ;;(load-theme 'apropospriate-light t)
-;;(load-theme 'spacemacs-dark t)
 ;; (load-theme 'gruvbox t)
 
 ;; (load-theme 'silkworm t)
@@ -148,6 +164,8 @@
 ;;             ;; We remove Which Function Mode from the mode line, because it's mostly
 ;;             ;; invisible here anyway.
 ;;             (assq-delete-all 'which-func-mode mode-line-misc-info))
+
+(add-hook 'web-mode-hook #'smartparens-mode)
 
 (global-whitespace-cleanup-mode)
 
@@ -285,26 +303,12 @@
 
 (setq auto-window-vscroll nil)
 
-
 (add-to-list 'load-path
              "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
 
 (setq yas-prompt-functions '(yas-completing-prompt))
-
-;; personal selective display
-(global-set-key (kbd "s-1") (lambda () (interactive) (set-selective-display 1)))
-(global-set-key (kbd "s-2") (lambda () (interactive) (set-selective-display 3)))
-(global-set-key (kbd "s-3") (lambda () (interactive) (set-selective-display 5)))
-(global-set-key (kbd "s-4") (lambda () (interactive) (set-selective-display 7)))
-(global-set-key (kbd "s-5") (lambda () (interactive) (set-selective-display 9)))
-(global-set-key (kbd "s-6") (lambda () (interactive) (set-selective-display 11)))
-(global-set-key (kbd "s-7") (lambda () (interactive) (set-selective-display 13)))
-(global-set-key (kbd "s-8") (lambda () (interactive) (set-selective-display 15)))
-(global-set-key (kbd "s-9") (lambda () (interactive) (set-selective-display 17)))
-(global-set-key (kbd "s-0") 'set-selective-display)
-
 
 (setq-default cursor-type 'bar)
 ;;(set-cursor-color "#ff2334")
@@ -314,7 +318,7 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
-(define-key global-map (kbd "C-c C-c") 'company-complete)
+;;(define-key global-map (kbd "C-c C-c") 'company-complete)
 
 (setq company-tooltip-limit 20)                      ; bigger popup window
 ;;(setq company-tooltip-align-annotations 't)          ; align annotations to the right tooltip border
@@ -336,6 +340,8 @@
 
 ;;(delete-selection-mode nil)
 
+(global-set-key (kbd "RET") 'newline-and-indent)
+
 (global-undo-tree-mode t)
 
 (global-origami-mode t)
@@ -347,26 +353,37 @@
 (define-key global-map (kbd "C-c C-k") 'quickrun)
 (define-key global-map (kbd "C-c C-q") 'quickrun-shell)
 
-(quickrun-add-command "web"
-                      '((:command . "open")
-                        (:exec    .  "open %s")))
+;; (quickrun-add-command "web"
+;;                       '((:command . "open")
+;;                         (:exec    .  "open %s")))
+
+(require 'flycheck)
+(add-hook 'c++-mode-hook (lambda () (setq flycheck-clang-language-standard "c++11")))
+
+
+;; Add C++ command for C11 and set it default in C++ file.
+(quickrun-add-command "c++/c11"
+                      '((:command . "g++")
+                        (:exec    . ("%c -std=c++11 %o -o %e %s"
+                                     "%e %a"))
+                        (:remove  . ("%e")))
+                      :default "c++")
 
 (quickrun-add-command "go"
                       '((:command . "go")
                         (:exec    .  "go run %s")))
 
-(quickrun-add-command "javascript/babel"
+(quickrun-add-command "babel"
                       '((:command . "babel-node")
-                        (:exec    . "babel-node %s"))
-                      :mode 'web-mode)
+                        (:exec    . "%c %s")))
 
-;; (quickrun-set-default "js" "javascript/babel")
+(quickrun-set-default "javascript" "babel")
 
 (autoload 'extempore-mode "~/.emacs.d/extempore.el" "" t)
 (autoload 'extempore-repl "~/.emacs.d/extempore.el" "" t)
 (add-to-list 'auto-mode-alist '("\\.xtm$" . extempore-mode))
 
-(setq large-file-warning-threshold 200000000)
+;; (setq large-file-warning-threshold 200000000)
 
 (setq org-todo-keyword-faces
       '(("DOING" . "blue") ("WAITING_REVIEW" . "yellow") ("MAYBE" . "pink")))
@@ -382,8 +399,15 @@
 ;; JSX ------------------------------------
 
 ;; http://www.flycheck.org/manual/latest/index.html
-(require 'flycheck)
 (flycheck-add-mode 'javascript-eslint 'web-mode)
+
+(require 'flycheck-flow)
+(flycheck-add-mode 'javascript-flow 'web-mode)
+
+;; (eval-after-load 'flycheck
+;;    '(flycheck-add-mode 'html-tidy 'web-mode))
+
+(global-flycheck-mode 1)
 
 ;;disable jshint since we prefer eslint checking
 (setq-default flycheck-disabled-checkers
@@ -393,17 +417,56 @@
 (defun myJSXHook ()
   "My Hook for JSX Files"
   (interactive)
-  (web-mode)
   (web-mode-set-content-type "jsx")
   (flycheck-select-checker 'javascript-eslint)
   (flycheck-mode)
   (tern-mode t))
 
+;; (setq web-mode-content-types-alist
+;;   '(("jsx" . "\\.js[x]?\\'")))
+
 (setq flycheck-javascript-eslint-executable "eslint-project-relative")
 
-(add-to-list 'magic-mode-alist '("import " . myJSXHook) )
+;;(add-to-list 'magic-mode-alist '("import " . myJSXHook) )
+
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
+(setq web-mode-attr-indent-offset 2)
+
+(defun flowHook ()
+  "enable flow"
+  (interactive)
+  (web-mode-set-content-type "jsx")
+  (flycheck-select-checker 'javascript-eslint)
+  (flycheck-add-next-checker 'javascript-eslint 'javascript-flow)
+  (flycheck-mode)
+  (tern-mode t))
 
 (global-set-key (kbd "C-c j") 'myJSXHook)
+(global-set-key (kbd "C-c f") 'flowHook)
+
+;; (add-hook 'web-mode-hook 'myJSXHook)
+
+(require 'org)
+(require 'ob)
+
+;; make org mode allow eval of some langs
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (js . t)))
+
+;; stop emacs asking for confirmation
+(setq org-confirm-babel-evaluate nil)
+(setq org-src-fontify-natively t)
+
+(setenv "NODE_PATH"
+  (concat
+   (getenv "HOME") "/scratch/presentations/node_modules"  ":"
+   (getenv "NODE_PATH")
+  )
+)
 
 ;; helm swoop ------------------
 (require 'helm-swoop)
@@ -430,9 +493,6 @@
 (define-key helm-multi-swoop-map (kbd "C-r") 'helm-previous-line)
 (define-key helm-multi-swoop-map (kbd "C-s") 'helm-next-line)
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/emacs-livedown"))
-(require 'livedown)
-
 ;;--------------------------------------------------------------------------------------------------------------------------
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -446,7 +506,7 @@
  '(css-indent-offset 2)
  '(custom-safe-themes
    (quote
-    ("705f3f6154b4e8fac069849507fd8b660ece013b64a0a31846624ca18d6cf5e1" "b747fb36e99bc7f497248eafd6e32b45613ee086da74d1d92a8da59d37b9a829" default)))
+    ("5a7830712d709a4fc128a7998b7fa963f37e960fd2e8aa75c76f692b36e6cf3c" "b7e38c2b835e8b46cb51beb222ec85310a2b63135d4abbca44ecf533706fa6aa" "50e7f9d112e821e42bd2b8410d50de966c35c7434dec12ddea99cb05dd368dd8" "badc4f9ae3ee82a5ca711f3fd48c3f49ebe20e6303bba1912d4e2d19dd60ec98" "705f3f6154b4e8fac069849507fd8b660ece013b64a0a31846624ca18d6cf5e1" "b747fb36e99bc7f497248eafd6e32b45613ee086da74d1d92a8da59d37b9a829" default)))
  '(evil-emacs-state-cursor (quote ("#D50000" bar)))
  '(evil-insert-state-cursor (quote ("#D50000" hbar)))
  '(evil-normal-state-cursor (quote ("#F57F17" box)))
@@ -483,10 +543,36 @@
  '(js2-basic-offset 2)
  '(magit-diff-use-overlays nil)
  '(nginx-indent-level 2)
+ '(org-src-lang-modes
+   (quote
+    (("ocaml" . tuareg)
+     ("elisp" . emacs-lisp)
+     ("ditaa" . artist)
+     ("asymptote" . asy)
+     ("dot" . fundamental)
+     ("sqlite" . sql)
+     ("calc" . fundamental)
+     ("C" . c)
+     ("cpp" . c++)
+     ("C++" . c++)
+     ("screen" . shell-script)
+     ("shell" . sh)
+     ("bash" . sh)
+     ("js" . web))))
  '(pos-tip-background-color "#ffffff")
  '(pos-tip-foreground-color "#78909C")
- '(projectile-mode-line (quote (:eval (format " prjctl"))))
+ '(projectile-mode-line " prjctl")
  '(quickrun-focus-p t)
+ '(safe-local-variable-values
+   (quote
+    ((eval progn
+           (add-to-list
+            (quote exec-path)
+            (concat
+             (locate-dominating-file default-directory ".dir-locals.el")
+             "node_modules/.bin/")))
+     (checkdoc-minor-mode . t)
+     (mangle-whitespace . t))))
  '(session-use-package t nil (session))
  '(show-paren-mode t)
  '(tabbar-background-color "#ffffff")
@@ -512,12 +598,13 @@
      (340 . "#2790C3")
      (360 . "#66D9EF"))))
  '(vc-annotate-very-old-color nil)
+ '(web-mode-attr-indent-offset 2 t)
  '(web-mode-auto-close-style 2)
- '(web-mode-code-indent-offset 2)
- '(web-mode-css-indent-offset 2)
+ '(web-mode-code-indent-offset 2 t)
+ '(web-mode-css-indent-offset 2 t)
  '(web-mode-enable-auto-quoting nil)
  '(web-mode-enable-current-element-highlight t)
- '(web-mode-markup-indent-offset 2)
+ '(web-mode-markup-indent-offset 2 t)
  '(web-mode-sql-indent-offset 2)
  '(weechat-color-list
    (unspecified "#272822" "#49483E" "#A20C41" "#F92672" "#67930F" "#A6E22E" "#968B26" "#E6DB74" "#21889B" "#66D9EF" "#A41F99" "#FD5FF0" "#349B8D" "#A1EFE4" "#F8F8F2" "#F8F8F0")))
@@ -527,3 +614,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(show-paren-match ((t (:underline t)))))
+(put 'upcase-region 'disabled nil)
