@@ -102,8 +102,6 @@
 
 (setq system-uses-terminfo nil)
 
-(window-numbering-mode t)
-
 (global-undo-tree-mode t)
 
 (global-flycheck-mode 1)

@@ -78,7 +78,6 @@
              "node_modules/.bin/")))
      (checkdoc-minor-mode . t)
      (mangle-whitespace . t))))
- '(session-use-package t nil (session))
  '(show-paren-mode t)
  '(tabbar-background-color "#ffffff")
  '(vc-annotate-background nil)

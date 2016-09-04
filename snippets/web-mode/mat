@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: mat
+# key: mat
+# binding: direct-keybinding
+# --
+import $1 from 'material-ui/lib/$1';$0

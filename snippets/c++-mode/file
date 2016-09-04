@@ -1,0 +1,11 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: file
+# key: file
+# binding: direct-keybinding
+# --
+#include <iostream>
+using namespace std;
+
+int main() {
+  
+}
