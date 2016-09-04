@@ -28,9 +28,6 @@
 (require 'init-javascript)
 (require 'init-lisp)
 
-;; turn on helm-projectile
-(helm-projectile-on)
-
 ;; server
 (server-start)
 

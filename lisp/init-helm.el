@@ -32,5 +32,9 @@
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-c h x") 'helm-register)
 
+;; turn on helm-projectile
+(helm-projectile-on)
+
+
 (provide 'init-helm)
 ;;; init-helm.el ends here
