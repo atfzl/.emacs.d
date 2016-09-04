@@ -8,7 +8,7 @@
   (require 'package)
   (add-to-list
    'package-archives
-   '("melpa" . "http://melpa.org/packages/")
+   '("melpa-stable" . "http://melpa.org/packages/")
    t)
   (package-initialize))
 

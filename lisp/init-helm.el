@@ -2,6 +2,7 @@
 ;; Helm configuration
 
 ;;; Code:
+
 (require 'helm)
 (require 'helm-config)
 

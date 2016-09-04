@@ -24,7 +24,6 @@
 (depends-on "handlebars-mode")
 (depends-on "helm")
 (depends-on "helm-ag")
-(depends-on "helm-core")
 (depends-on "helm-projectile")
 (depends-on "helm-swoop")
 (depends-on "htmlize")

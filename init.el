@@ -5,14 +5,14 @@
 ;; load path so that configs from lisp folder can be required
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-(require 'init-melpa)
+;; (require 'init-melpa)
+(require 'init-general)
 (require 'init-helm)
 (require 'init-projectile)
 (require 'init-magit)
 (require 'init-yasnippet)
 (require 'init-company)
 (require 'init-helm-swoop)
-(require 'init-general)
 (require 'init-org)
 (require 'init-keys)
 (require 'init-extensions)
