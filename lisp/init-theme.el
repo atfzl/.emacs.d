@@ -15,6 +15,5 @@
 ;; show the cursor like this |
 (setq-default cursor-type 'bar)
 
-
 (provide 'init-theme)
 ;;; init-theme.el ends here

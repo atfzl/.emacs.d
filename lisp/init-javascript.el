@@ -36,13 +36,13 @@
   (append flycheck-disabled-checkers
     '(javascript-jshint)))
 
-;; so that eslint points to the local eslint in ./node_modules/.bin
-(setq flycheck-javascript-eslint-executable "eslint-project-relative")
 
 (defun myJSXHook ()
   "My Hook for JSX Files."
   (interactive)
+  (web-mode)
   (web-mode-set-content-type "jsx")
+  (flycheck-disable-checker 'javascript-flow)
   (flycheck-select-checker 'javascript-eslint)
   (flycheck-mode)
   (tern-mode t))
@@ -50,6 +50,7 @@
 (defun flowHook ()
   "Enable flow."
   (interactive)
+  (web-mode)
   (web-mode-set-content-type "jsx")
   (flycheck-select-checker 'javascript-eslint)
   (flycheck-add-next-checker 'javascript-eslint 'javascript-flow)
@@ -59,7 +60,8 @@
 (global-set-key (kbd "C-c j") 'myJSXHook)
 (global-set-key (kbd "C-c f") 'flowHook)
 
-(add-to-list 'magic-mode-alist '("/* @flow */" . flowHook) )
+(add-to-list 'magic-mode-alist '("/\\* @flow \\*/" . flowHook))
+(add-to-list 'auto-mode-alist '("\\.js\\'"      . myJSXHook))
 
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-css-indent-offset 2)

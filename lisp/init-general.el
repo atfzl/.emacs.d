@@ -106,6 +106,7 @@
 
 (global-flycheck-mode 1)
 
+(show-paren-mode t)
 
 (provide 'init-general)
 ;;; init-general.el ends here

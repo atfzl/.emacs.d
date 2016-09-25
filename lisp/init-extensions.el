@@ -3,7 +3,6 @@
 
 ;;; Code:
 
-(add-to-list 'auto-mode-alist '("\\.js\\'"         . web-mode))
 (add-to-list 'auto-mode-alist '("\\.es\\'"         . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'"       . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css\\'"        . web-mode))
@@ -11,7 +10,6 @@
 (add-to-list 'auto-mode-alist '("\\.zsh\\'"        . sh-mode))
 (add-to-list 'auto-mode-alist '("\\.zsh-theme\\'"  . sh-mode))
 (add-to-list 'auto-mode-alist '("\\.handlebars\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx$"          . web-mode))
 
 
 (provide 'init-extensions)

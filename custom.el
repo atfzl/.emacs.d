@@ -10,11 +10,9 @@
  '(css-indent-offset 2)
  '(custom-safe-themes
    (quote
-    ("78c1c89192e172436dbf892bd90562bc89e2cc3811b5f9506226e735a953a9c6" "5a7830712d709a4fc128a7998b7fa963f37e960fd2e8aa75c76f692b36e6cf3c" "b7e38c2b835e8b46cb51beb222ec85310a2b63135d4abbca44ecf533706fa6aa" "50e7f9d112e821e42bd2b8410d50de966c35c7434dec12ddea99cb05dd368dd8" "badc4f9ae3ee82a5ca711f3fd48c3f49ebe20e6303bba1912d4e2d19dd60ec98" "705f3f6154b4e8fac069849507fd8b660ece013b64a0a31846624ca18d6cf5e1" "b747fb36e99bc7f497248eafd6e32b45613ee086da74d1d92a8da59d37b9a829" default)))
- '(evil-emacs-state-cursor (quote ("#D50000" bar)))
- '(evil-insert-state-cursor (quote ("#D50000" hbar)))
- '(evil-normal-state-cursor (quote ("#F57F17" box)))
- '(evil-visual-state-cursor (quote ("#66BB6A" box)))
+    ("12670281275ea7c1b42d0a548a584e23b9c4e1d2dabb747fd5e2d692bcd0d39b" "93268bf5365f22c685550a3cbb8c687a1211e827edc76ce7be3c4bd764054bad" "840db7f67ce92c39deb38f38fbc5a990b8f89b0f47b77b96d98e4bf400ee590a" "34ed3e2fa4a1cb2ce7400c7f1a6c8f12931d8021435bad841fdc1192bd1cc7da" "78c1c89192e172436dbf892bd90562bc89e2cc3811b5f9506226e735a953a9c6" "5a7830712d709a4fc128a7998b7fa963f37e960fd2e8aa75c76f692b36e6cf3c" "b7e38c2b835e8b46cb51beb222ec85310a2b63135d4abbca44ecf533706fa6aa" "50e7f9d112e821e42bd2b8410d50de966c35c7434dec12ddea99cb05dd368dd8" "badc4f9ae3ee82a5ca711f3fd48c3f49ebe20e6303bba1912d4e2d19dd60ec98" "705f3f6154b4e8fac069849507fd8b660ece013b64a0a31846624ca18d6cf5e1" "b747fb36e99bc7f497248eafd6e32b45613ee086da74d1d92a8da59d37b9a829" default)))
+ '(electric-pair-mode t)
+ '(electric-pair-pairs (quote ((34 . 34) (39 . 39) (96 . 96))))
  '(fci-rule-color "#49483E")
  '(flycheck-javascript-flow-args nil)
  '(global-linum-mode t)
@@ -43,8 +41,8 @@
  '(highlight-symbol-colors
    (quote
     ("#F57F17" "#66BB6A" "#0097A7" "#42A5F5" "#7E57C2" "#D84315")))
- '(highlight-symbol-foreground-color "#546E7A")
  '(highlight-tail-colors (quote (("#F8BBD0" . 0) ("#FAFAFA" . 100))))
+ '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(magit-diff-use-overlays nil)
  '(nginx-indent-level 2)
@@ -64,8 +62,6 @@
      ("shell" . sh)
      ("bash" . sh)
      ("js" . web))))
- '(pos-tip-background-color "#ffffff")
- '(pos-tip-foreground-color "#78909C")
  '(projectile-mode-line " prjctl")
  '(quickrun-focus-p t)
  '(safe-local-variable-values
@@ -78,7 +74,6 @@
              "node_modules/.bin/")))
      (checkdoc-minor-mode . t)
      (mangle-whitespace . t))))
- '(show-paren-mode t)
  '(tabbar-background-color "#ffffff")
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
@@ -104,6 +99,7 @@
  '(vc-annotate-very-old-color nil)
  '(web-mode-attr-indent-offset 2)
  '(web-mode-auto-close-style 2)
+ '(web-mode-auto-quote-style 1)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
  '(web-mode-enable-auto-quoting nil)
@@ -117,4 +113,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(show-paren-match ((t (:underline t)))))
+ )

@@ -8,6 +8,7 @@
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "company")
+(depends-on "company-flow")
 (depends-on "company-tern")
 (depends-on "company-web")
 (depends-on "csv-mode")
