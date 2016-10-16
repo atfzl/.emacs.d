@@ -6,14 +6,12 @@
 (require 'company)
 (require 'quickrun)
 (require 'web-mode)
-(require 'js2-refactor)
 (require 'flycheck)
 (require 'flycheck-flow)
 
-;; tern
-(eval-after-load 'tern
-  '(progn
-     (add-to-list 'company-backends 'company-tern)))
+;; flow auto complete
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'company-flow))
 
 ;; quickrun
 (quickrun-add-command "babel"
@@ -21,11 +19,6 @@
                         (:exec    . "%c %s")))
 
 (quickrun-set-default "javascript" "babel")
-
-;; js2-refactor
-(add-hook 'js2-mode-hook #'js2-refactor-mode)
-
-(js2r-add-keybindings-with-prefix "C-c C-m")
 
 ;; flycheck
 (flycheck-add-mode 'javascript-eslint 'web-mode)

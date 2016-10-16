@@ -2,6 +2,9 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
+;; (setq package-enable-at-startup nil)
+;; (package-initialize)
+
 ;; load path so that configs from lisp folder can be required
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
@@ -27,6 +30,7 @@
 (require 'init-extempore)
 (require 'init-javascript)
 (require 'init-lisp)
+(require 'init-python)
 
 ;; server
 (server-start)

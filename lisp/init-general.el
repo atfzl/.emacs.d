@@ -4,8 +4,8 @@
 ;;; Code:
 
 ;; execute path from shell
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+ (when (memq window-system '(mac ns))
+   (exec-path-from-shell-initialize))
 
 ;; Disable distractions
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
