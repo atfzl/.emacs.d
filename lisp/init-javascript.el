@@ -30,8 +30,8 @@
     '(javascript-jshint)))
 
 
-(defun myJSXHook ()
-  "My Hook for JSX Files."
+(defun jsWithEslint ()
+  "eslint for js files"
   (interactive)
   (web-mode)
   (web-mode-set-content-type "jsx")
@@ -40,8 +40,8 @@
   (flycheck-mode)
   (tern-mode t))
 
-(defun flowHook ()
-  "Enable flow."
+(defun jsWithEslintFlow ()
+  "flow and eslint for js files"
   (interactive)
   (web-mode)
   (web-mode-set-content-type "jsx")
@@ -50,11 +50,11 @@
   (flycheck-mode)
   (tern-mode t))
 
-(global-set-key (kbd "C-c j") 'myJSXHook)
-(global-set-key (kbd "C-c f") 'flowHook)
+(global-set-key (kbd "C-c j") 'jsWithEslint)
+(global-set-key (kbd "C-c f") 'jsWithEslintFlow)
 
-(add-to-list 'magic-mode-alist '("/\\* @flow \\*/" . flowHook))
-(add-to-list 'auto-mode-alist '("\\.js\\'"      . myJSXHook))
+(add-to-list 'auto-mode-alist '("\\.js\\'"      . jsWithEslint))
+(add-to-list 'magic-mode-alist '("/\\* @flow \\*/" . jsWithEslintFlow))
 
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
