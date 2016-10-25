@@ -20,7 +20,7 @@
 
 (quickrun-set-default "javascript" "babel")
 
-;; flycheck
+;; add eslint and flow checkers to flycheck
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 (flycheck-add-mode 'javascript-flow 'web-mode)
 
@@ -37,8 +37,7 @@
   (web-mode-set-content-type "jsx")
   (flycheck-disable-checker 'javascript-flow)
   (flycheck-select-checker 'javascript-eslint)
-  (flycheck-mode)
-  (tern-mode t))
+  (flycheck-mode))
 
 (defun jsWithEslintFlow ()
   "flow and eslint for js files"
@@ -47,8 +46,7 @@
   (web-mode-set-content-type "jsx")
   (flycheck-select-checker 'javascript-eslint)
   (flycheck-add-next-checker 'javascript-eslint 'javascript-flow)
-  (flycheck-mode)
-  (tern-mode t))
+  (flycheck-mode))
 
 (global-set-key (kbd "C-c j") 'jsWithEslint)
 (global-set-key (kbd "C-c f") 'jsWithEslintFlow)
