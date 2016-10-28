@@ -4,10 +4,10 @@
 ;;; Code:
 
 ;; theme
-(load-theme 'atom-one-dark t)
+(load-theme 'spacemacs-dark t)
 
 ;; line number font color
-(set-face-foreground 'linum "#5C6370")
+;; (set-face-foreground 'linum "#5C6370")
 
 ;; font family and size
 (set-frame-font "CamingoCode 14" nil t)

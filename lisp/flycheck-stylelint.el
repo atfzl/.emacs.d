@@ -12,7 +12,7 @@
 
 (require 'flycheck)
 
-(defconst flycheck-stylelint-args '("--formatter" "json")
+(defconst flycheck-stylelint-args '("--formatter" "json" "--syntax=scss")
   "Common arguments to stylelint invocations.")
 
 (flycheck-def-config-file-var flycheck-stylelintrc
