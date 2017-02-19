@@ -3,4 +3,4 @@
 # key: inspect
 # binding: direct-keybinding
 # --
-console.log(require('util').inspect($0, false, null));
+console.log(require('util').inspect($0, {}, null));

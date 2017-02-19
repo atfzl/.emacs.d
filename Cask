@@ -54,7 +54,6 @@
 (depends-on "rainbow-mode")
 (depends-on "restclient")
 (depends-on "s")
-(depends-on "scss-mode")
 (depends-on "smartparens")
 (depends-on "smex")
 (depends-on "tern")

@@ -14,11 +14,11 @@
   '(add-to-list 'company-backends 'company-flow))
 
 ;; quickrun
-(quickrun-add-command "babel"
-                      '((:command . "babel-node")
-                        (:exec    . "%c %s")))
+;; (quickrun-add-command "babel"
+;;                       '((:command . "babel-node")
+;;                         (:exec    . "%c %s")))
 
-(quickrun-set-default "javascript" "babel")
+;; (quickrun-set-default "javascript" "babel")
 
 ;; add eslint and flow checkers to flycheck
 (flycheck-add-mode 'javascript-eslint 'web-mode)
@@ -52,13 +52,15 @@
 (global-set-key (kbd "C-c f") 'jsWithEslintFlow)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'"      . jsWithEslint))
-(add-to-list 'magic-mode-alist '("/\\* @flow \\*/" . jsWithEslintFlow))
+(add-to-list 'magic-mode-alist '("/. @flow" . jsWithEslintFlow))
 
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
 (setq web-mode-code-indent-offset 2)
 (setq web-mode-attr-indent-offset 2)
 
+(eval-after-load 'web-mode
+  '(add-hook 'web-mode-hook #'add-node-modules-path))
 
 (provide 'init-javascript)
 ;;; init-javascript.el ends here
