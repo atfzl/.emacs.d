@@ -3,15 +3,15 @@
 
 ;;; Code:
 
-(require 'company)
+;; (require 'company)
 (require 'quickrun)
 (require 'web-mode)
 (require 'flycheck)
 (require 'flycheck-flow)
 
 ;; flow auto complete
-(eval-after-load 'company
-  '(add-to-list 'company-backends 'company-flow))
+;; (eval-after-load 'company
+;;  '(add-to-list 'company-backends 'company-flow))
 
 ;; quickrun
 ;; (quickrun-add-command "babel"
@@ -59,8 +59,8 @@
 (setq web-mode-code-indent-offset 2)
 (setq web-mode-attr-indent-offset 2)
 
-(eval-after-load 'web-mode
-  '(add-hook 'web-mode-hook #'add-node-modules-path))
+;; (eval-after-load 'web-mode
+;;   '(add-hook 'web-mode-hook #'add-node-modules-path))
 
 (provide 'init-javascript)
 ;;; init-javascript.el ends here

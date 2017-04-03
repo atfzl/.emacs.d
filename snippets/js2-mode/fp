@@ -3,4 +3,4 @@
 # key: fp
 # binding: direct-keybinding
 # --
-import _ from 'lodash/fp';
+import fp from 'lodash/fp';
