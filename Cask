@@ -48,7 +48,6 @@
 (depends-on "popwin")
 (depends-on "prodigy")
 (depends-on "projectile")
-(depends-on "pyvenv")
 (depends-on "quickrun")
 (depends-on "rainbow-delimiters")
 (depends-on "rainbow-mode")
