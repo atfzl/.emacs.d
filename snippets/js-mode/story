@@ -1,0 +1,11 @@
+# key: story
+# name: story
+# --
+import React from 'react';
+import { module, storiesOf, action } from '@kadira/storybook';
+import $1 from './$1';
+
+storiesOf('$1', module)
+  .add('basic', () => (
+    <$1 onClick={action('clicked')} />
+  ));

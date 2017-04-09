@@ -1,0 +1,4 @@
+# key: styled
+# name: styled
+# --
+import styled from 'styled-components';
