@@ -62,7 +62,7 @@
      ("js" . web))))
  '(package-selected-packages
    (quote
-    (spacemacs-theme coffee-mode add-node-modules-path flatland-theme yaml-mode whitespace-cleanup-mode web-mode web-beautify use-package undo-tree smex smartparens restclient rainbow-mode rainbow-delimiters quickrun prodigy popwin pallet origami org-bullets nyan-mode nginx-mode material-theme markdown-mode magit lua-mode json-mode js2-refactor jade-mode idle-highlight-mode htmlize helm-swoop helm-projectile helm-ag handlebars-mode gruvbox-theme go-mode git-timemachine flycheck-flow flycheck-cask expand-region exec-path-from-shell es-mode drag-stuff doom-themes csv-mode company-web company-tern company-flow base16-theme atom-one-dark-theme ag ace-jump-mode)))
+    (flow-mode spacemacs-theme coffee-mode add-node-modules-path flatland-theme yaml-mode whitespace-cleanup-mode web-mode web-beautify use-package undo-tree smex smartparens restclient rainbow-mode rainbow-delimiters quickrun prodigy popwin pallet origami org-bullets nyan-mode nginx-mode material-theme markdown-mode magit lua-mode json-mode js2-refactor jade-mode idle-highlight-mode htmlize helm-swoop helm-projectile helm-ag handlebars-mode gruvbox-theme go-mode git-timemachine flycheck-flow flycheck-cask expand-region exec-path-from-shell es-mode drag-stuff doom-themes csv-mode company-web company-tern company-flow base16-theme atom-one-dark-theme ag ace-jump-mode)))
  '(projectile-globally-ignored-files (quote ("TAGS")))
  '(projectile-mode t nil (projectile))
  '(projectile-mode-line " prjctl")
@@ -71,20 +71,6 @@
  '(safe-local-variable-values
    (quote
     ((eval progn
-           (require
-            (quote flycheck))
-           (setq-default flycheck-disabled-checkers
-                         (append flycheck-disabled-checkers
-                                 (quote
-                                  (javascript-eslint)))))
-     (eval progn
-           (require
-            (quote flycheck))
-           (setq-default flycheck-disabled-checkers
-                         (append flycheck-disabled-checkers
-                                 (quote
-                                  (javascript-jshint)))))
-     (eval progn
            (add-to-list
             (quote exec-path)
             (concat

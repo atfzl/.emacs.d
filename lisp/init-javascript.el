@@ -59,8 +59,8 @@
 (setq web-mode-code-indent-offset 2)
 (setq web-mode-attr-indent-offset 2)
 
-;; (eval-after-load 'web-mode
-;;   '(add-hook 'web-mode-hook #'add-node-modules-path))
+(eval-after-load 'web-mode
+  '(add-hook 'web-mode-hook #'add-node-modules-path))
 
 (provide 'init-javascript)
 ;;; init-javascript.el ends here
