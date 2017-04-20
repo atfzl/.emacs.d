@@ -10,9 +10,8 @@ On mac you can do this by `brew install cask`
 Then
 
 ```sh
-cd ~
-git clone github.com/atfzl/.emacs.d
-cd .emacs.d
+git clone https://github.com/atfzl/.emacs.d ~/.emacs.d
+cd ~/.emacs.d
 cask install
 ```
 
