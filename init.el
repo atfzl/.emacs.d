@@ -30,6 +30,7 @@
 (require 'init-extempore)
 (require 'init-javascript)
 (require 'init-lisp)
+(require 'init-typescript)
 
 ;; server
 (server-start)

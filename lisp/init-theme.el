@@ -4,13 +4,15 @@
 ;;; Code:
 
 ;; theme
-(load-theme 'spacemacs-dark t)
+(load-theme 'base16-gruvbox-dark-hard t)
 
-;; line number font color
-;; (set-face-foreground 'linum "#5C6370")
+(set-face-attribute 'fringe nil :background "#1d2021")
+
+;; line number font color background
+(set-face-background 'linum "#1d2021")
 
 ;; font family and size
-(set-frame-font "CamingoCode 14" nil t)
+(set-frame-font "Camingocode 14" nil t)
 
 ;; show the cursor like this |
 (setq-default cursor-type 'bar)
