@@ -7,7 +7,6 @@
 (require 'quickrun)
 (require 'web-mode)
 (require 'flycheck)
-(require 'flycheck-flow)
 
 ;; flow auto complete
 ;; (eval-after-load 'company
@@ -22,37 +21,30 @@
 
 ;; add eslint and flow checkers to flycheck
 (flycheck-add-mode 'javascript-eslint 'web-mode)
-(flycheck-add-mode 'javascript-flow 'web-mode)
 
 ;;disable jshint since we prefer eslint checking
 (setq-default flycheck-disabled-checkers
   (append flycheck-disabled-checkers
     '(javascript-jshint)))
 
-
 (defun jsWithEslint ()
   "eslint for js files"
   (interactive)
   (web-mode)
   (web-mode-set-content-type "jsx")
-  (flycheck-disable-checker 'javascript-flow)
   (flycheck-select-checker 'javascript-eslint)
-  (flycheck-mode))
-
-(defun jsWithEslintFlow ()
-  "flow and eslint for js files"
-  (interactive)
-  (web-mode)
-  (web-mode-set-content-type "jsx")
-  (flycheck-select-checker 'javascript-eslint)
-  (flycheck-add-next-checker 'javascript-eslint 'javascript-flow)
   (flycheck-mode))
 
 (global-set-key (kbd "C-c j") 'jsWithEslint)
-(global-set-key (kbd "C-c f") 'jsWithEslintFlow)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'"      . jsWithEslint))
-(add-to-list 'magic-mode-alist '("/. @flow" . jsWithEslintFlow))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'"      . jsWithEslint))
+
+(defadvice web-mode-highlight-part (around tweak-jsx activate)
+  (if (equal web-mode-content-type "jsx")
+    (let ((web-mode-enable-part-face nil))
+      ad-do-it)
+    ad-do-it))
 
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
