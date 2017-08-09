@@ -4,7 +4,7 @@
 ;;; Code:
 
 ;; theme
-(load-theme 'spacemacs-dark t)
+(load-theme 'doom-one t)
 
 ;; (set-face-attribute 'fringe nil :background "#1d2021")
 

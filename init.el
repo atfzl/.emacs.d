@@ -29,6 +29,7 @@
 (require 'init-go)
 (require 'init-extempore)
 (require 'init-javascript)
+(require 'init-haskell)
 (require 'init-lisp)
 
 ;; server
@@ -37,6 +38,5 @@
 ;; file with custom-set-variables
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
-
 
 ;;; init.el ends here
