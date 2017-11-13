@@ -20,6 +20,9 @@
 
 (setq org-log-done 'time)
 
+(with-eval-after-load 'org (setq org-agenda-files
+                                 '("~/org/")))
+
 ;; make org mode allow eval of some langs
 (org-babel-do-load-languages
  'org-babel-load-languages

@@ -80,8 +80,8 @@
 ;; tab width global
 (setq-default tab-width 2)
 
-;; electric pair mode
-(electric-pair-mode 1)
+;; pair mode
+(smartparens-global-mode 1)
 
 ;; Ctrl-K with no kill
 (defun delete-line-no-kill ()

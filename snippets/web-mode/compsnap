@@ -1,0 +1,4 @@
+# key: compsnap
+# name: compsnap
+# --
+expect(component).toMatchSnapshot();

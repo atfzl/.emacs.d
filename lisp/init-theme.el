@@ -4,7 +4,7 @@
 ;;; Code:
 
 ;; theme
-(load-theme 'doom-one t)
+(load-theme 'dracula t)
 
 ;; (set-face-attribute 'fringe nil :background "#1d2021")
 
@@ -13,6 +13,8 @@
 
 ;; font family and size
 (set-frame-font "Camingocode 14" nil t)
+
+;; (set-face-background 'mode-line "#1d2026")
 
 ;; show the cursor like this |
 (setq-default cursor-type 'bar)

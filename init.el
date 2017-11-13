@@ -27,7 +27,7 @@
 (require 'init-mc)
 (require 'init-cpp)
 (require 'init-go)
-(require 'init-extempore)
+;; (require 'init-extempore)
 (require 'init-javascript)
 (require 'init-haskell)
 (require 'init-lisp)
