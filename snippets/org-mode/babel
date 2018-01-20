@@ -3,6 +3,6 @@
 # key: babel
 # binding: direct-keybinding
 # --
-#+BEGIN_SRC js :cmd "org-babel-node --presets es2015,stage-0" :results output drawer
+#+BEGIN_SRC js :results output drawer
 $0
 #+END_SRC

@@ -17,7 +17,6 @@
 (require 'init-company)
 (require 'init-helm-swoop)
 (require 'init-org)
-(require 'init-keys)
 (require 'init-extensions)
 (require 'init-functions)
 (require 'init-dired)
@@ -27,10 +26,10 @@
 (require 'init-mc)
 (require 'init-cpp)
 (require 'init-go)
-;; (require 'init-extempore)
 (require 'init-javascript)
 (require 'init-haskell)
 (require 'init-lisp)
+(require 'init-keys)
 
 ;; server
 (server-start)
