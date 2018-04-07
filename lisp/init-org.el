@@ -39,5 +39,7 @@
 (setq org-refile-use-outline-path (quote file))
 (setq org-enforce-todo-dependencies t)
 
+(add-hook 'org-mode-hook 'org-indent-mode)
+
 (provide 'init-org)
 ;;; init-org.el ends here
