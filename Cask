@@ -12,6 +12,7 @@
 (depends-on "company-tern")
 (depends-on "company-web")
 (depends-on "csv-mode")
+(depends-on "dracula-theme")
 (depends-on "drag-stuff")
 (depends-on "doom-themes")
 (depends-on "es-mode")
