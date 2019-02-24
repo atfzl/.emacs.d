@@ -4,7 +4,7 @@
 ;;; Code:
 
 ;; theme
-(load-theme 'dracula t)
+;; (load-theme 'dracula t)
 
 ;; (set-face-attribute 'fringe nil :background "#1d2021")
 
@@ -12,7 +12,7 @@
 ;; (set-face-background 'linum "#1d2021")
 
 ;; font family and size
-(set-frame-font "Camingocode 14" nil t)
+(set-frame-font "IBM Plex Mono 13" nil t)
 
 ;; (set-face-background 'mode-line "#1d2026")
 

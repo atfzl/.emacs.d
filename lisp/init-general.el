@@ -108,5 +108,7 @@
 
 (show-paren-mode t)
 
+(setq tramp-default-method "ssh")
+
 (provide 'init-general)
 ;;; init-general.el ends here
