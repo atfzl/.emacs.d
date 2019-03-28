@@ -3,7 +3,7 @@
 (cask-initialize)
 
 ;; (setq package-enable-at-startup nil)
-;; (package-initialize)
+(package-initialize)
 
 ;; load path so that configs from lisp folder can be required
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
