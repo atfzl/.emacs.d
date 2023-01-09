@@ -36,6 +36,7 @@
   (find-file "~/.emacs.d/init.el")
   )
 (global-set-key (kbd "C-c C-j") 'org-journal-new-entry)
+(setq initial-buffer-choice "~/org/inbox.org")
 
 ;;; from melpa
 ;;;
