@@ -30,6 +30,11 @@
       '((:eval (if (buffer-file-name)
                    (abbreviate-file-name (buffer-file-name))
                  "%b"))))
+(defun init ()
+  "Shortcut to reach init.el ."
+  (interactive)
+  (find-file "~/.emacs.d/init.el")
+  )
 
 ;;; from melpa
 ;;;
