@@ -65,7 +65,7 @@
  '(gac-automatically-push-p t)
  '(gac-silent-message-p t)
  '(org-journal-date-format "%A, %d/%m/%y")
- '(org-journal-dir "~/Documents/Notes/Journal/")
+ '(org-journal-dir "~/org/journal/")
  '(package-selected-packages
    '(projectile whitespace-cleanup-mode literate-calc-mode vertico org-journal smooth-scrolling git-auto-commit-mode undo-tree olivetti)))
 (custom-set-faces
