@@ -52,6 +52,10 @@
 (vertico-mode 1)
 ;; unnecessary whitespace must be cleaned up
 (global-whitespace-cleanup-mode)
+;; projectile
+(projectile-mode +1)
+;; Recommended keymap prefix on macOS
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
