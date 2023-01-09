@@ -39,6 +39,8 @@
 (smooth-scrolling-mode 1)
 (setq smooth-scroll-margin 5)
 (vertico-mode 1)
+;; unnecessary whitespace must be cleaned up
+(global-whitespace-cleanup-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -50,7 +52,7 @@
  '(org-journal-date-format "%A, %d/%m/%y")
  '(org-journal-dir "~/Documents/Notes/Journal/")
  '(package-selected-packages
-   '(literate-calc-mode vertico org-journal smooth-scrolling git-auto-commit-mode undo-tree olivetti)))
+   '(whitespace-cleanup-mode literate-calc-mode vertico org-journal smooth-scrolling git-auto-commit-mode undo-tree olivetti)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
