@@ -35,6 +35,8 @@
 (require 'smooth-scrolling)
 (smooth-scrolling-mode 1)
 (setq smooth-scroll-margin 5)
+;; helm
+(global-set-key (kbd "M-x") 'helm-M-x)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
