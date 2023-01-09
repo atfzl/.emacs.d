@@ -2,7 +2,7 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
-;; foo
+;; bfoo
 (load-theme 'leuven t)
 (add-hook 'org-mode-hook #'org-indent-mode)
 (setq org-startup-with-inline-images t)
