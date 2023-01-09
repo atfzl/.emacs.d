@@ -22,10 +22,6 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;; show the cursor like this |
 (setq-default cursor-type 'bar)
-;; ido
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(ido-mode 1)
 
 ;;; from melpa
 ;;;
