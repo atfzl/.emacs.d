@@ -35,6 +35,7 @@
 (require 'smooth-scrolling)
 (smooth-scrolling-mode 1)
 (setq smooth-scroll-margin 5)
+(vertico-mode 1)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
