@@ -43,8 +43,7 @@
  ;; If there is more than one, they won't work right.
  '(gac-automatically-push-p t)
  '(gac-silent-message-p t)
- '(package-selected-packages
-   '(vertico smooth-scrolling git-auto-commit-mode undo-tree olivetti)))
+ '(package-selected-packages '(smooth-scrolling git-auto-commit-mode undo-tree olivetti)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
