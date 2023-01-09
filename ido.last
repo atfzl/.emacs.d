@@ -1,0 +1,35 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/atfzl/" . ".emacs.d/")
+ ("/Users/atfzl/Documents/" . "Notes/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/atfzl/.emacs.d/"
+ "/Users/atfzl/Documents/Notes/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "init.el"
+ "mind.org"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/atfzl/.emacs.d/" (25532 25927 963421 224000) ".git/" "elpa/" ".gitignore" "init.el" "auto-save-list/" ".dir-locals.el" "../" "./")
+
+ ("/Users/" (25504 44222 913482 923000) "Shared/" "atfzl/" ".localized" "../" "./")
+
+ ("/Users/atfzl/Documents/Notes/" (25532 405 154075 960000) "foo.org" "bar.org" ".git/" "mind.org" "Mind Management, Not Time Management.md" ".dir-locals.el" "Journal/" "../" "./")
+
+ ("/Users/atfzl/Documents/" (25532 340 663015 9000) "work/" "Notes/" "Blog/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/atfzl/" (25532 25014 915018 45000) ".zsh_sessions/" ".viminfo" ".bash_history" ".gitconfig" "Downloads/" ".oh-my-zsh/" ".BZG/" ".swiftpm/" ".vscode/" "Documents/" ".parsec/" ".npm/" ".pnpm-state/" ".Trash/" ".degit/" ".node/" ".profile" "Applications/" "Movies/" ".ssh/" ".rustup/" ".zshenv" ".dropbox/" "Public/" "scratch/" ".cups/" ".cargo/" ".node_repl_history" ".emacs.d/" ".lesshst" "Library/" "Desktop/" ".zsh_history" ".spicylauncher/" "Postman/" ".zprofile" "Pictures/" "projects/" ".local/" ".pnpm-store/" ".zshrc" ".wallaby/" ".CFUserTextEncoding" ".lldb/" ".logseq/" ".DS_Store" ".zcompdump-Atif’s MacBook Air-5.8" ".zcompdump-Atif’s MacBook Air-5.8.1" "Music/" ".config/" ".quokka/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
