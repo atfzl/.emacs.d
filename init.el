@@ -38,9 +38,6 @@
 ;; helm
 (helm-mode 1)
 (global-set-key (kbd "M-x") 'helm-M-x)
-(require 'helm-fuzzy)
-(with-eval-after-load 'helm
-  (helm-fuzzy-mode 1))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
