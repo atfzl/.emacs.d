@@ -25,6 +25,11 @@
 (setq-default show-trailing-whitespace t)
 ;; refresh buffers automatically if changed by ext program
 (global-auto-revert-mode 1)
+;; buffer path in bar
+(setq frame-title-format
+      '((:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name))
+                 "%b"))))
 
 ;;; from melpa
 ;;;
