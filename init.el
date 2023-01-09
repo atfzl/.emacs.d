@@ -38,9 +38,6 @@
 ;; helm
 (helm-mode 1)
 (global-set-key (kbd "M-x") 'helm-M-x)
-(define-key helm-map (kbd "TAB") #'helm-execute-persistent-action)
-(define-key helm-map (kbd "<tab>") #'helm-execute-persistent-action)
-(define-key helm-map (kbd "C-z") #'helm-select-action)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
