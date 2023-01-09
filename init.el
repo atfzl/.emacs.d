@@ -35,7 +35,7 @@
   (interactive)
   (find-file "~/.emacs.d/init.el")
   )
-(global-set-key "\C-c C-j" 'org-journal-new-entry)
+(global-set-key "\C-c \C-j" 'org-journal-new-entry)
 
 ;;; from melpa
 ;;;
