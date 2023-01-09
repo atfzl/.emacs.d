@@ -23,6 +23,8 @@
 ;; show the cursor like this |
 (setq-default cursor-type 'bar)
 (setq-default show-trailing-whitespace t)
+;; refresh buffers automatically if changed by ext program
+(global-auto-revert-mode 1)
 
 ;;; from melpa
 ;;;
