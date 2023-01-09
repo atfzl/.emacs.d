@@ -4,23 +4,43 @@
 (package-initialize)
 
 (load-theme 'leuven t)
-(require 'olivetti)
-(add-hook 'text-mode-hook #'olivetti-mode)
 (add-hook 'org-mode-hook #'org-indent-mode)
-(set-frame-font "Iosevka 20" nil t)
+(setq org-startup-with-inline-images t)
+(set-frame-font "Iosevka 18" nil t)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (global-visual-line-mode)
+;; window size
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 ;; use space instead of tab for indentation
 (setq-default indent-tabs-mode nil)
 ;; tab width global
 (setq-default tab-width 2)
 ;; Don't save backup files
 (setq make-backup-files nil)
-
+;; writing yes or no is length, type y / n instead
+(defalias 'yes-or-no-p 'y-or-n-p)
+;; show the cursor like this |
+(setq-default cursor-type 'bar)
 
 ;;; from melpa
+;;;
+;; olivetti
+(require 'olivetti)
+(add-hook 'text-mode-hook #'olivetti-mode)
 ;; undo-tree
 (global-undo-tree-mode)
 (setq undo-tree-auto-save-history nil)
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(undo-tree olivetti)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
