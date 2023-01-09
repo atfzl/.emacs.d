@@ -37,7 +37,6 @@
   )
 (global-set-key (kbd "C-c C-j") 'org-journal-new-entry)
 
-
 ;;; from melpa
 ;;;
 ;; olivetti
