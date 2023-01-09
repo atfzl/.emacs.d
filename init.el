@@ -31,6 +31,10 @@
 ;; undo-tree
 (global-undo-tree-mode)
 (setq undo-tree-auto-save-history nil)
+;; smooth-scrolling
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
+(setq smooth-scroll-margin 5)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
