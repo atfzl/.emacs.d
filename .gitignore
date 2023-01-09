@@ -1,0 +1,11 @@
+.DS_Store
+.cask
+.mc-lists.el
+projectile-bookmarks.eld
+projectile.cache
+recentf
+.session
+eshell
+elpa
+network-security.data
+auto-save-list/
