@@ -67,7 +67,7 @@
  '(org-journal-date-format "%A, %d/%m/%y")
  '(org-journal-dir "~/org/journal/")
  '(package-selected-packages
-   '(projectile whitespace-cleanup-mode literate-calc-mode vertico org-journal smooth-scrolling git-auto-commit-mode undo-tree olivetti)))
+   '(ag projectile whitespace-cleanup-mode literate-calc-mode vertico org-journal smooth-scrolling git-auto-commit-mode undo-tree olivetti)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
