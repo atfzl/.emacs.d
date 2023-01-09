@@ -22,6 +22,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;; show the cursor like this |
 (setq-default cursor-type 'bar)
+(setq-default show-trailing-whitespace t)
 
 ;;; from melpa
 ;;;
