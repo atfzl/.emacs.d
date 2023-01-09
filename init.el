@@ -5,8 +5,6 @@
 
 (load-theme 'leuven t)
 (add-hook 'org-mode-hook #'org-indent-mode)
-(global-set-key (kbd "C-c c") 'org-capture)
-(setq org-default-notes-file "~/Documents/Notes/capture.org")
 (setq org-startup-with-inline-images t)
 (set-frame-font "Iosevka 18" nil t)
 (tool-bar-mode -1)
