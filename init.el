@@ -43,6 +43,7 @@
  ;; If there is more than one, they won't work right.
  '(gac-automatically-push-p t)
  '(gac-silent-message-p t)
+ '(org-journal-dir "~/Documents/Notes/")
  '(package-selected-packages
    '(org-journal smooth-scrolling git-auto-commit-mode undo-tree olivetti)))
 (custom-set-faces
