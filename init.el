@@ -48,8 +48,6 @@
 (smooth-scrolling-mode 1)
 (setq smooth-scroll-margin 5)
 (vertico-mode 1)
-;; Recommended keymap prefix on macOS
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
