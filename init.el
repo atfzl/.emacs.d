@@ -56,9 +56,6 @@
  ;; If there is more than one, they won't work right.
  '(gac-automatically-push-p t)
  '(gac-silent-message-p t)
- '(org-journal-date-format "%A, %d/%m/%y")
- '(org-journal-dir "~/org/Journal/")
- '(org-journal-file-format "%Y%m%d.org")
  '(package-selected-packages
    '(vertico smooth-scrolling git-auto-commit-mode undo-tree olivetti)))
 (custom-set-faces
