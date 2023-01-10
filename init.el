@@ -60,9 +60,6 @@
  ;; If there is more than one, they won't work right.
  '(gac-automatically-push-p t)
  '(gac-silent-message-p t)
- '(org-journal-date-format "%A, %d/%m/%y")
- '(org-journal-dir "~/org/Journal/")
- '(org-journal-file-format "%Y%m%d.org")
  '(package-selected-packages
    '(magit flx-ido ag projectile whitespace-cleanup-mode literate-calc-mode vertico org-journal smooth-scrolling git-auto-commit-mode undo-tree olivetti)))
 (custom-set-faces
