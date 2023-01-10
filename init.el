@@ -22,6 +22,8 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;; show the cursor like this |
 (setq-default cursor-type 'bar)
+;; unnecessary whitespace must be cleaned up
+(global-whitespace-cleanup-mode)
 (setq-default show-trailing-whitespace t)
 ;; refresh buffers automatically if changed by ext program
 (global-auto-revert-mode 1)
