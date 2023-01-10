@@ -41,8 +41,6 @@
 ;; olivetti
 (require 'olivetti)
 (add-hook 'text-mode-hook #'olivetti-mode)
-;; undo-tree
-(global-undo-tree-mode)
 ;; smooth-scrolling
 (require 'smooth-scrolling)
 (smooth-scrolling-mode 1)
