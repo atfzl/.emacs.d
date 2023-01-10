@@ -51,8 +51,6 @@
 (smooth-scrolling-mode 1)
 (setq smooth-scroll-margin 5)
 (vertico-mode 1)
-;; unnecessary whitespace must be cleaned up
-(global-whitespace-cleanup-mode)
 ;; projectile
 (projectile-mode +1)
 ;; Recommended keymap prefix on macOS
