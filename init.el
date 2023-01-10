@@ -41,6 +41,7 @@
 ;; olivetti
 (require 'olivetti)
 (add-hook 'text-mode-hook #'olivetti-mode)
+
 ;; smooth-scrolling
 (require 'smooth-scrolling)
 (smooth-scrolling-mode 1)
