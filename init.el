@@ -23,6 +23,8 @@
 ;; show the cursor like this |
 (setq-default cursor-type 'bar)
 (setq-default show-trailing-whitespace t)
+;; Disable the annoying alarms
+(setq ring-bell-function 'ignore)
 ;; refresh buffers automatically if changed by ext program
 (global-auto-revert-mode 1)
 ;; buffer path in bar
@@ -36,6 +38,22 @@
   (find-file "~/.emacs.d/init.el")
   )
 
+(defun notes()
+  "Shortcut to reach notes."
+  (interactive)
+  (find-file "~/Library/Mobile Documents/com~apple~CloudDocs/notes")
+  )
+;; Ctrl-K with no kill
+(defun delete-line-no-kill ()
+  "Do not cut line with Control-k, just remove it."
+  (interactive)
+  (delete-region
+   (point)
+   (save-excursion (move-end-of-line 1) (point)))
+  (delete-char 1)
+  )
+(global-set-key (kbd "C-k") 'delete-line-no-kill)
+
 ;;; from melpa
 ;;;
 ;; olivetti
@@ -48,12 +66,25 @@
 (setq smooth-scroll-margin 5)
 (vertico-mode 1)
 
+;; projectile
+(require 'projectile)
+;; Recommended keymap prefix on macOS
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(projectile-mode +1)
+
+;; orderless
+(require 'orderless)
+(setq completion-styles '(orderless basic)
+      completion-category-overrides '((file (styles basic partial-completion))))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(vertico smooth-scrolling olivetti)))
+ '(gac-automatically-push-p t)
+ '(gac-silent-message-p t)
+ '(package-selected-packages '(orderless projectile vertico smooth-scrolling olivetti)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
