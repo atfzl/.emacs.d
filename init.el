@@ -82,6 +82,7 @@
   :ensure t
   :config
   (setq gac-automatically-push-p t)
+  (setq gac-automatically-add-new-files-p t)
   )
 
 (use-package git-timemachine
