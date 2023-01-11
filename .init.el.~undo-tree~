@@ -1,0 +1,140 @@
+(undo-tree-save-format-version . 1)
+"83a54b9d305a353965c0017ca1089ca1fca8a728"
+[nil nil nil nil (25534 41151 878650 0) 0 nil]
+([nil nil ((5173 . 5412) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -5173) (5170 . 5172) (#("
+" 0 1 (fontified nil)) . -5170) (5095 . 5171) (#(" " 0 1 (fontified nil)) . 5095) (4884 . 5096) (#(" " 0 1 (fontified nil)) . 4884) (4556 . 4885) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(gac-automatically-push-p t)
+ '(gac-silent-message-p t)
+ '(org-default-notes-file
+   \"~/Library/Mobile Documents/com~apple~CloudDocs/notes/inbox.org\")
+ '(org-directory \"~/Library/Mobile Documents/com~apple~CloudDocs/notes/\")
+ '(package-selected-packages
+   '(helm-swoop pandoc-mode helm-ag use-package smooth-scrolling olivetti)))" 0 577 (fontified nil)) . -4556)) nil (25534 41252 441051 0) 0 nil])
+([nil nil ((5211 . 5450) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 237 (fontified nil) 237 238 (fontified nil) 238 239 (fontified nil)) . -5211) (5208 . 5210) (#("
+" 0 1 (fontified nil)) . -5208) (5133 . 5209) (#(" " 0 1 (fontified nil)) . 5133) (4884 . 5134) (#(" " 0 1 (fontified nil)) . 4884) (4556 . 4885) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(gac-automatically-push-p t)
+ '(gac-silent-message-p t)
+ '(org-default-notes-file
+   \"~/Library/Mobile Documents/com~apple~CloudDocs/notes/inbox.org\")
+ '(org-directory \"~/Library/Mobile Documents/com~apple~CloudDocs/notes/\")
+ '(org-journal-file-format \"%Y-%m-%d\")
+ '(package-selected-packages
+   '(helm-swoop pandoc-mode helm-ag use-package smooth-scrolling olivetti)))" 0 245 (fontified nil) 245 248 (fontified nil) 248 272 (fontified nil) 272 273 (fontified nil) 273 274 (fontified nil) 274 275 (fontified nil) 275 276 (fontified nil) 276 279 (fontified nil) 279 299 (fontified nil) 299 300 (fontified nil) 300 301 (fontified nil) 301 302 (fontified nil) 302 303 (fontified nil) 303 306 (fontified nil) 306 332 (fontified nil) 332 396 (fontified nil) 396 397 (fontified nil) 397 398 (fontified nil) 398 401 (fontified nil) 401 414 (fontified nil) 414 415 (fontified nil) 415 470 (fontified nil) 470 471 (fontified nil) 471 472 (fontified nil) 472 475 (fontified nil) 475 498 (fontified nil) 498 499 (fontified nil) 499 509 (fontified nil) 509 510 (fontified nil) 510 511 (fontified nil) 511 514 (fontified nil) 514 543 (fontified nil) 543 614 (fontified nil) 614 615 (fontified nil) 615 616 (fontified nil)) . -4556)) nil (25534 41477 574936 0) 0 nil])
+([nil nil ((#("
+" 0 1 (fontified nil)) . 239) (undo-tree-id0 . 1) (undo-tree-id1 . 1) (#("(global-set-key (kbd \"C-c C-c\") 'org-capture)" 0 21 (fontified t) 21 30 (face font-lock-string-face fontified t) 30 45 (fontified t)) . 239) (undo-tree-id2 . 45) (undo-tree-id3 . -1) (undo-tree-id4 . 1) (undo-tree-id5 . -45) (t 25534 41477 578935 113000)) nil (25534 41621 605140 0) 0 nil])
+([nil nil ((1794 . 1797) (t 25534 41621 606552 354000)) nil (25534 41722 787791 0) 0 nil])
+([nil nil ((1797 . 1808)) nil (25534 41722 787790 0) 0 nil])
+([nil nil ((#("a" 0 1 (face font-lock-builtin-face fontified t)) . -1806) (undo-tree-id14 . -1) (#("p" 0 1 (face font-lock-builtin-face fontified t)) . -1807) (undo-tree-id15 . -1) 1808) nil (25534 41722 787789 0) 0 nil])
+([nil nil ((1806 . 1809)) nil (25534 41722 787787 0) 0 nil])
+([nil nil ((1809 . 1812)) nil (25534 41722 787786 0) 0 nil])
+([nil nil ((1812 . 1820)) nil (25534 41722 787785 0) 0 nil])
+([nil nil ((1820 . 1836)) nil (25534 41722 787784 0) 0 nil])
+([nil nil ((1836 . 1843)) nil (25534 41722 787784 0) 0 nil])
+([nil nil ((1843 . 1847)) nil (25534 41722 787783 0) 0 nil])
+([nil nil ((1847 . 1850)) nil (25534 41722 787782 0) 0 nil])
+([nil nil ((1850 . 1852)) nil (25534 41722 787782 0) 0 nil])
+([nil nil ((1851 . 1858)) nil (25534 41722 787781 0) 0 nil])
+([nil nil ((1858 . 1859)) nil (25534 41722 787780 0) 0 nil])
+([nil nil ((1860 . 1863)) nil (25534 41722 787780 0) 0 nil])
+([nil nil ((1863 . 1875)) nil (25534 41722 787779 0) 0 nil])
+([nil nil ((1860 . 1861)) nil (25534 41722 787778 0) 0 nil])
+([nil nil ((1876 . 1886)) nil (25534 41722 787778 0) 0 nil])
+([nil nil ((1886 . 1887)) nil (25534 41722 787777 0) 0 nil])
+([nil nil ((1887 . 1890)) nil (25534 41722 787776 0) 0 nil])
+([nil nil ((1890 . 1891)) nil (25534 41722 787776 0) 0 nil])
+([nil nil ((#(")" 0 1 (face font-lock-string-face fontified t)) . -1859) (undo-tree-id11 . -1) (undo-tree-id12 . 1) (undo-tree-id13 . -1) 1860) nil (25534 41722 787775 0) 0 nil])
+([nil nil ((1890 . 1891)) nil (25534 41722 787772 0) 0 nil])
+([nil nil ((#("\"" 0 1 (face font-lock-string-face fontified t)) . -1889) (undo-tree-id9 . -1) (#("=" 0 1 (face font-lock-string-face fontified t)) . -1890) (undo-tree-id10 . -1) 1891) nil (25534 41722 787771 0) 0 nil])
+([nil nil ((1889 . 1896)) nil (25534 41722 787769 0) 0 nil])
+([nil nil ((1896 . 1899)) nil (25534 41722 787768 0) 0 nil])
+([nil nil ((#("-" 0 1 (face font-lock-string-face fontified t)) . -1895) (undo-tree-id8 . -1) 1896) nil (25534 41722 787767 0) 0 nil])
+([nil nil ((1898 . 1908)) nil (25534 41722 787765 0) 0 nil])
+([nil nil ((#("o" 0 1 (fontified t)) . -1906) (undo-tree-id6 . -1) (#("j" 0 1 (fontified t)) . -1907) (undo-tree-id7 . -1) 1908) nil (25534 41722 787764 0) 0 nil])
+([nil nil ((1906 . 1914)) nil (25534 41722 787750 0) 0 nil])
+([nil nil ((1914 . 1928)) nil (25534 41722 787749 0) 0 nil])
+([nil nil ((1928 . 1929)) nil (25534 41722 787745 0) 0 nil])
+([nil nil ((1794 . 1797) (t 25534 41722 790277 138000)) nil (25534 41849 549855 0) 0 nil])
+([nil nil ((nil rear-nonsticky nil 1845 . 1846) (nil fontified nil 1823 . 1846) (nil fontified nil 1818 . 1823) (nil fontified nil 1797 . 1818) (1797 . 1846)) nil (25534 41849 549854 0) 0 nil])
+([nil nil ((#("k" 0 1 (fontified t face font-lock-string-face)) . -1821) (undo-tree-id81 . -1) 1822) nil (25534 41849 549852 0) 0 nil])
+([nil nil ((1821 . 1826)) nil (25534 41849 549851 0) 0 nil])
+([nil nil ((#("j" 0 1 (fontified t face font-lock-string-face)) . -1821) (undo-tree-id80 . -1) 1822) nil (25534 41849 549851 0) 0 nil])
+([nil nil ((1821 . 1822)) nil (25534 41849 549849 0) 0 nil])
+([nil nil ((1849 . 1852)) nil (25534 41849 549849 0) 0 nil])
+([nil nil ((#("e" 0 1 (fontified t)) . -1831) (undo-tree-id21 . -1) (undo-tree-id22 . -1) (undo-tree-id23 . -1) (#("l" 0 1 (fontified t)) . -1832) (undo-tree-id24 . -1) (undo-tree-id25 . -1) (undo-tree-id26 . -1) (#("e" 0 1 (fontified t)) . -1833) (undo-tree-id27 . -1) (undo-tree-id28 . -1) (undo-tree-id29 . -1) (#("t" 0 1 (fontified t)) . -1834) (undo-tree-id30 . -1) (undo-tree-id31 . -1) (undo-tree-id32 . -1) (#("e" 0 1 (fontified t)) . -1835) (undo-tree-id33 . -1) (undo-tree-id34 . -1) (undo-tree-id35 . -1) (#("-" 0 1 (fontified t)) . -1836) (undo-tree-id36 . -1) (undo-tree-id37 . -1) (undo-tree-id38 . -1) (#("l" 0 1 (fontified t)) . -1837) (undo-tree-id39 . -1) (undo-tree-id40 . -1) (undo-tree-id41 . -1) (#("i" 0 1 (fontified t)) . -1838) (undo-tree-id42 . -1) (undo-tree-id43 . -1) (undo-tree-id44 . -1) (#("n" 0 1 (fontified t)) . -1839) (undo-tree-id45 . -1) (undo-tree-id46 . -1) (undo-tree-id47 . -1) (#("e" 0 1 (fontified t)) . -1840) (undo-tree-id48 . -1) (undo-tree-id49 . -1) (undo-tree-id50 . -1) (#("-" 0 1 (fontified t)) . -1841) (undo-tree-id51 . -1) (undo-tree-id52 . -1) (undo-tree-id53 . -1) (#("n" 0 1 (fontified t)) . -1842) (undo-tree-id54 . -1) (undo-tree-id55 . -1) (undo-tree-id56 . -1) (#("o" 0 1 (fontified t)) . -1843) (undo-tree-id57 . -1) (undo-tree-id58 . -1) (undo-tree-id59 . -1) (#("-" 0 1 (fontified t)) . -1844) (undo-tree-id60 . -1) (undo-tree-id61 . -1) (undo-tree-id62 . -1) (#("k" 0 1 (fontified t)) . -1845) (undo-tree-id63 . -1) (undo-tree-id64 . -1) (undo-tree-id65 . -1) (#("i" 0 1 (fontified t)) . -1846) (undo-tree-id66 . -1) (undo-tree-id67 . -1) (undo-tree-id68 . -1) (#("l" 0 1 (fontified t)) . -1847) (undo-tree-id69 . -1) (undo-tree-id70 . -1) (undo-tree-id71 . -1) (#("l" 0 1 (fontified t)) . -1848) (undo-tree-id72 . -1) (undo-tree-id73 . -1) (undo-tree-id74 . -1) (#("o" 0 1 (fontified t)) . -1849) (undo-tree-id75 . -1) (undo-tree-id76 . -1) (undo-tree-id77 . -1) (#("r" 0 1 (fontified t)) . -1850) (undo-tree-id78 . -1) (#("g" 0 1 (fontified t)) . -1851) (undo-tree-id79 . -1) 1852) nil (25534 41849 549846 0) 0 nil])
+([nil nil ((#("d" 0 1 (fontified t)) . -1830) (undo-tree-id18 . -1) (undo-tree-id19 . -1) (undo-tree-id20 . -1) 1831) nil (25534 41849 549814 0) 0 nil])
+([nil nil ((1830 . 1832)) nil (25534 41849 549812 0) 0 nil])
+([nil nil ((1832 . 1851)) nil (25534 41849 549812 0) 0 nil])
+([nil nil ((1852 . 1855)) nil (25534 41849 549811 0) 0 nil])
+([nil nil ((nil rear-nonsticky nil 1933 . 1934) (nil fontified nil 1904 . 1934) (nil fontified nil 1895 . 1904) (nil fontified nil 1865 . 1895) (nil fontified nil 1856 . 1865) (nil fontified nil 1855 . 1856) (1855 . 1934)) nil (25534 41849 549810 0) 0 nil])
+([nil nil ((#("
+" 0 1 (fontified nil)) . 1935) (undo-tree-id13 . -1) (undo-tree-id14 . -1) (undo-tree-id15 . -1) (undo-tree-id16 . -1) (#("  :bind-keymap" 0 2 (fontified t) 2 14 (fontified t face font-lock-builtin-face)) . 1935) (undo-tree-id17 . -14)) nil (25534 41849 549809 0) 0 nil])
+([nil nil ((#("
+" 0 1 (fontified nil)) . 1935) (undo-tree-id10 . -1) (undo-tree-id11 . -1) (#("  (\"C-c C-j\" . org-journal-new-entry)" 0 3 (fontified t) 3 12 (fontified t face font-lock-string-face) 12 37 (fontified t)) . 1935) (undo-tree-id12 . -37)) nil (25534 41849 549806 0) 0 nil])
+([nil nil ((#("
+" 0 1 (fontified nil)) . 1935) (#("  (\"C-c C-f\" . org-journal-next-entry)" 0 3 (fontified t) 3 12 (fontified t face font-lock-string-face) 12 38 (fontified t)) . 1935) (undo-tree-id5 . -38) (undo-tree-id6 . -2) (undo-tree-id7 . -2) (undo-tree-id8 . -2) (undo-tree-id9 . -2)) nil (25534 41849 549803 0) 0 nil])
+([nil nil ((#("
+" 0 1 (fontified nil)) . 1935) (#("  (\"C-c C-b\" . org-journal-previous-entry)" 0 3 (fontified t) 3 12 (fontified t face font-lock-string-face) 12 42 (fontified t)) . 1935) (undo-tree-id2 . -42) (undo-tree-id3 . -42) (undo-tree-id4 . -42)) nil (25534 41849 549908 0) 0 nil])
+([nil nil ((1856 . 1876)) nil (25534 41868 59614 0) 0 nil] [nil nil ((#("
+" 0 1 (fontified nil)) . 1935) (undo-tree-id0 . -1) (#(")" 0 1 (fontified t)) . 1935) (undo-tree-id1 . -1)) ((1935 . 1936) (1935 . 1936)) (25534 41849 549796 0) 0 nil])
+([nil nil ((1885 . 1886)) nil (25534 41868 59613 0) 0 nil])
+nil
+([nil nil ((1916 . 1936)) nil (25534 41868 59612 0) 0 nil])
+([nil nil ((1945 . 1946)) nil (25534 41868 59608 0) 0 nil])
+([nil nil ((1830 . 1831) (t 25534 41868 63041 429000)) nil (25534 41893 15645 0) 0 nil])
+([nil nil ((#("'" 0 1 (fontified t)) . -1829) (undo-tree-id4 . -1) 1830) nil (25534 41893 15644 0) 0 nil])
+([nil nil ((1830 . 1831)) nil (25534 41893 15643 0) 0 nil])
+([nil nil ((#("." 0 1 (fontified t)) . -1829) (undo-tree-id2 . -1) (#(" " 0 1 (fontified t)) . -1830) (undo-tree-id3 . -1) 1831) nil (25534 41893 15642 0) 0 nil])
+([nil nil ((1829 . 1830)) nil (25534 41893 15640 0) 0 nil])
+([nil nil ((#(" " 0 1 (fontified t)) . 1888)) nil (25534 41893 15639 0) 0 nil])
+([nil nil ((#("." 0 1 (fontified t)) . -1887) (undo-tree-id1 . -1) 1888) nil (25534 41893 15638 0) 0 nil])
+([nil nil ((1887 . 1888)) nil (25534 41893 15637 0) 0 nil])
+([nil nil ((#(" " 0 1 (fontified t)) . 1947)) nil (25534 41893 15636 0) 0 nil])
+([nil nil ((#("." 0 1 (fontified t)) . -1946) (undo-tree-id0 . -1) 1947) nil (25534 41893 15634 0) 0 nil])
+([nil nil ((1946 . 1947)) nil (25534 41893 15621 0) 0 nil])
+([nil nil ((1656 . 1659) (t 25534 41893 17852 339000)) nil (25534 41950 695773 0) 0 nil])
+([nil nil ((#("c" 0 1 (face font-lock-builtin-face fontified t)) . -1653) (undo-tree-id15 . -1) (#("o" 0 1 (face font-lock-builtin-face fontified t)) . -1654) (undo-tree-id16 . -1) (#("n" 0 1 (face font-lock-builtin-face fontified t)) . -1655) (undo-tree-id17 . -1) (#("i" 0 1 (face font-lock-builtin-face fontified t)) . -1656) (undo-tree-id18 . -1) (#("n" 0 1 (face font-lock-builtin-face fontified t)) . -1657) (undo-tree-id19 . -1) (#("i" 0 1 (face font-lock-builtin-face fontified t)) . -1658) (undo-tree-id20 . -1) (#("f" 0 1 (face font-lock-builtin-face fontified t)) . -1659) (undo-tree-id21 . -1) (#("i" 0 1 (face font-lock-builtin-face fontified t)) . -1660) (undo-tree-id22 . -1) (#("g" 0 1 (face font-lock-builtin-face fontified t)) . -1661) (undo-tree-id23 . -1) 1662) nil (25534 41950 695771 0) 0 nil])
+([nil nil ((1653 . 1657)) nil (25534 41950 695757 0) 0 nil])
+([nil nil ((1792 . 1795)) nil (25534 41950 695756 0) 0 nil])
+([nil nil ((1795 . 1802)) nil (25534 41950 695755 0) 0 nil])
+([nil nil ((#("i" 0 1 (face font-lock-builtin-face fontified t)) . -1653) (undo-tree-id11 . -1) (#("n" 0 1 (face font-lock-builtin-face fontified t)) . -1654) (undo-tree-id12 . -1) (#("i" 0 1 (face font-lock-builtin-face fontified t)) . -1655) (undo-tree-id13 . -1) (#("t" 0 1 (face font-lock-builtin-face fontified t)) . -1656) (undo-tree-id14 . -1) 1657) nil (25534 41950 695754 0) 0 nil])
+([nil nil ((1653 . 1659)) nil (25534 41950 695749 0) 0 nil])
+([nil nil ((#("c" 0 1 (face font-lock-builtin-face fontified t)) . -1798) (undo-tree-id5 . -1) (#("o" 0 1 (face font-lock-builtin-face fontified t)) . -1799) (undo-tree-id6 . -1) (#("n" 0 1 (face font-lock-builtin-face fontified t)) . -1800) (undo-tree-id7 . -1) (#("f" 0 1 (face font-lock-builtin-face fontified t)) . -1801) (undo-tree-id8 . -1) (#("i" 0 1 (face font-lock-builtin-face fontified t)) . -1802) (undo-tree-id9 . -1) (#("g" 0 1 (face font-lock-builtin-face fontified t)) . -1803) (undo-tree-id10 . -1) 1804) nil (25534 41950 695747 0) 0 nil])
+([nil nil ((1798 . 1802)) nil (25534 41950 695729 0) 0 nil])
+([nil current ((5338 . 5577) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -5338) (5026 . 5337) (#(" " 0 1 (fontified nil)) . 5026) (4698 . 5027) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(gac-automatically-push-p t)
+ '(gac-silent-message-p t)
+ '(org-default-notes-file
+   \"~/Library/Mobile Documents/com~apple~CloudDocs/notes/inbox.org\")
+ '(org-directory \"~/Library/Mobile Documents/com~apple~CloudDocs/notes/\")
+ '(org-journal-file-format \"%Y-%m-%d\")
+ '(org-link-file-path-type 'relative)
+ '(package-selected-packages
+   '(helm-swoop pandoc-mode helm-ag use-package smooth-scrolling olivetti)))" 0 654 (fontified nil)) . -4698)) nil (25534 45678 483576 0) 0 nil])
+nil

@@ -38,11 +38,6 @@
   (find-file "~/.emacs.d/init.el")
   )
 
-(defun notes()
-  "Shortcut to reach notes."
-  (interactive)
-  (find-file "~/Library/Mobile Documents/com~apple~CloudDocs/notes")
-  )
 ;; Ctrl-K with no kill
 (defun delete-line-no-kill ()
   "Do not cut line with Control-k, just remove it."
@@ -56,26 +51,106 @@
 
 ;;; from melpa
 ;;;
-;; olivetti
-(require 'olivetti)
-(add-hook 'text-mode-hook #'olivetti-mode)
+(use-package olivetti
+  :ensure t
+  :config
+  (add-hook 'text-mode-hook #'olivetti-mode)
+  )
 
-;; smooth-scrolling
-(require 'smooth-scrolling)
-(smooth-scrolling-mode 1)
-(setq smooth-scroll-margin 5)
-(vertico-mode 1)
+(use-package org-journal
+  :ensure t
+  :defer t
+  :config
+  (setq org-journal-dir "~/Library/Mobile Documents/com~apple~CloudDocs/notes/journal"
+        org-journal-date-format "%A, %d %B %Y")
+  :init
+  (global-set-key (kbd "C-c C-j") 'org-journal-new-entry)
+  (global-set-key (kbd "C-c C-f") 'org-journal-next-entry)
+  (global-set-key (kbd "C-c C-b") 'org-journal-previous-entry)
+)
 
-;; projectile
-(require 'projectile)
-;; Recommended keymap prefix on macOS
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-(projectile-mode +1)
+(use-package undo-tree
+  :ensure t
+  :config
+  (global-undo-tree-mode)
+  )
 
-;; orderless
-(require 'orderless)
-(setq completion-styles '(orderless basic)
-      completion-category-overrides '((file (styles basic partial-completion))))
+(use-package smooth-scrolling
+  :ensure t
+  :init
+  (smooth-scrolling-mode 1)
+  (setq smooth-scroll-margin 5)
+  )
+
+(use-package projectile
+  :ensure t
+  :init
+  (setq projectile-completion-system 'helm)
+  :config
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  (projectile-mode +1)
+  )
+
+(use-package helm-projectile
+  :ensure t
+  :after helm
+  :config
+  ;; turn on helm-projectile
+  (helm-projectile-on)
+  )
+
+(use-package helm-ag
+  :ensure t
+  )
+
+(use-package helm
+  :ensure t
+  :init
+  (setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
+        helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
+        helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
+        helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
+        helm-ff-file-name-history-use-recentf t)
+
+  :config
+  (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
+  (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
+  (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+  (global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+  (helm-mode 1)
+  (helm-autoresize-mode t)
+
+  (global-set-key (kbd "C-x b") 'helm-mini)
+  (global-set-key (kbd "C-x C-b") 'helm-mini)
+  (global-set-key (kbd "M-x") 'helm-M-x)
+  (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+  (global-set-key (kbd "C-c h x") 'helm-register)
+  )
+
+(use-package helm-swoop
+  :ensure t
+  :config
+  (global-set-key (kbd "s-f") 'helm-swoop)
+  ;; (global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
+  (global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
+  (global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
+
+  ;; When doing isearch, hand the word over to helm-swoop
+  (define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
+  ;; From helm-swoop to helm-multi-swoop-all
+  (define-key helm-swoop-map (kbd "M-i") 'helm-multi-swoop-all-from-helm-swoop)
+
+  ;; Instead of helm-multi-swoop-all, you can also use helm-multi-swoop-current-mode
+  (define-key helm-swoop-map (kbd "M-m") 'helm-multi-swoop-current-mode-from-helm-swoop)
+
+  ;; Move up and down like isearch
+  (define-key helm-swoop-map (kbd "C-r") 'helm-previous-line)
+  (define-key helm-swoop-map (kbd "C-s") 'helm-next-line)
+  (define-key helm-multi-swoop-map (kbd "C-r") 'helm-previous-line)
+  (define-key helm-multi-swoop-map (kbd "C-s") 'helm-next-line)
+
+  )
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -84,7 +159,12 @@
  ;; If there is more than one, they won't work right.
  '(gac-automatically-push-p t)
  '(gac-silent-message-p t)
- '(package-selected-packages '(orderless projectile vertico smooth-scrolling olivetti)))
+ '(org-default-notes-file
+   "~/Library/Mobile Documents/com~apple~CloudDocs/notes/inbox.org")
+ '(org-directory "~/Library/Mobile Documents/com~apple~CloudDocs/notes/")
+ '(org-journal-file-format "%Y-%m-%d")
+ '(org-link-file-path-type 'relative)
+ '(package-selected-packages '(helm-swoop helm-ag use-package smooth-scrolling olivetti)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
