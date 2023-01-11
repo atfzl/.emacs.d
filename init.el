@@ -78,7 +78,7 @@
 ;;   (global-undo-tree-mode)
 ;;   )
 
-(use-package auto-commit-mode
+(use-package git-auto-commit-mode
   :ensure t
   )
 
