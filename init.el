@@ -83,6 +83,7 @@
   :config
   (setq gac-automatically-push-p t)
   (setq gac-automatically-add-new-files-p t)
+  (setq gac-silent-message-p t)
   )
 
 (use-package git-timemachine
