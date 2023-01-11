@@ -80,6 +80,8 @@
 
 (use-package git-auto-commit-mode
   :ensure t
+  :init
+  (setq gac-automatically-push-p t)
   )
 
 (use-package git-timemachine
