@@ -80,7 +80,7 @@
 
 (use-package git-auto-commit-mode
   :ensure t
-  :init
+  :config
   (setq gac-automatically-push-p t)
   )
 
