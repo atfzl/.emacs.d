@@ -78,6 +78,10 @@
 ;;   (global-undo-tree-mode)
 ;;   )
 
+(use-package auto-commit-mode
+  :ensure t
+  )
+
 (use-package git-timemachine
   :ensure t
   )
@@ -108,6 +112,9 @@
 
 (use-package helm-ag
   :ensure t
+  :init
+   (gac-automatically-push-p t)
+   (gac-silent-message-p t)
   )
 
 (use-package helm
@@ -186,7 +193,7 @@
  '(gac-silent-message-p t)
  '(org-link-file-path-type 'relative)
  '(package-selected-packages
-   '(git-timemachine org-roam helm-swoop helm-ag use-package smooth-scrolling olivetti)))
+   '(git-auto-commit-mode git-timemachine org-roam helm-swoop helm-ag use-package smooth-scrolling olivetti)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
