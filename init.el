@@ -116,9 +116,6 @@
 
 (use-package helm-ag
   :ensure t
-  :init
-   (gac-automatically-push-p t)
-   (gac-silent-message-p t)
   )
 
 (use-package helm
