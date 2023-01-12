@@ -192,7 +192,7 @@
  ;; If there is more than one, they won't work right.
  '(org-link-file-path-type 'relative)
  '(package-selected-packages
-   '(git-auto-commit-mode git-timemachine org-roam helm-swoop helm-ag use-package smooth-scrolling olivetti)))
+   '(nano-theme git-auto-commit-mode git-timemachine org-roam helm-swoop helm-ag use-package smooth-scrolling olivetti)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
