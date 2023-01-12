@@ -3,7 +3,7 @@
              '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(load-theme 'leuven t)
+(load-theme 'nano t)
 (add-hook 'org-mode-hook #'org-indent-mode)
 (setq org-startup-with-inline-images t)
 (set-frame-font "Iosevka 18" nil t)
