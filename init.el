@@ -3,6 +3,7 @@
              '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+(setq inhibit-startup-screen t)
 (load-theme 'leuven t)
 (add-hook 'org-mode-hook #'org-indent-mode)
 (setq org-startup-with-inline-images t)
