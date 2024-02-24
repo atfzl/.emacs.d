@@ -6,7 +6,7 @@
 (load-theme 'leuven t)
 (add-hook 'org-mode-hook #'org-indent-mode)
 (setq org-startup-with-inline-images t)
-(set-frame-font "Iosevka 18" nil t)
+(set-frame-font "JetBrains Mono 14" nil t)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (global-visual-line-mode)
