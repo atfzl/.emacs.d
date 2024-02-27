@@ -4,7 +4,7 @@
 (package-initialize)
 
 (setq inhibit-startup-screen t)
-(load-theme 'leuven t)
+(load-theme 'nano-light t)
 (add-hook 'org-mode-hook #'org-indent-mode)
 (setq org-startup-with-inline-images t)
 (set-frame-font "JetBrains Mono 14" nil t)
