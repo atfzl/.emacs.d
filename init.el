@@ -53,6 +53,10 @@
 ;;; from melpa
 ;;;
 
+(use-package nano
+  :ensure t
+  )
+
 (use-package olivetti
   :ensure t
   :config
@@ -196,7 +200,7 @@
    '("e7820b899036ae7e966dcaaec29fd6b87aef253748b7de09e74fdc54407a7a02" "1781e8bccbd8869472c09b744899ff4174d23e4f7517b8a6c721100288311fa5" default))
  '(org-link-file-path-type 'relative)
  '(package-selected-packages
-   '(company-ledger prettier ledger-mode git-auto-commit-mode git-timemachine org-roam helm-swoop helm-ag use-package smooth-scrolling olivetti)))
+   '(nano company-ledger prettier ledger-mode git-auto-commit-mode git-timemachine org-roam helm-swoop helm-ag use-package smooth-scrolling olivetti)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
