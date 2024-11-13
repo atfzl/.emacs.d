@@ -53,10 +53,6 @@
 ;;; from melpa
 ;;;
 
-(use-package nano
-  :ensure t
-  )
-
 (use-package olivetti
   :ensure t
   :config
