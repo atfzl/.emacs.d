@@ -72,13 +72,13 @@
   (global-set-key (kbd "C-c C-b") 'org-journal-previous-entry)
 )
 
-;; (use-package undo-tree
-;;   :ensure t
-;;   :config
-;;   (setq undo-tree-auto-save-history nil)
-;;   :init
-;;   (global-undo-tree-mode)
-;;   )
+(use-package undo-tree
+  :ensure t
+  :config
+  (setq undo-tree-auto-save-history nil)
+  :init
+  (global-undo-tree-mode)
+  )
 
 (use-package git-auto-commit-mode
   :ensure t
@@ -193,10 +193,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("e7820b899036ae7e966dcaaec29fd6b87aef253748b7de09e74fdc54407a7a02" "1781e8bccbd8869472c09b744899ff4174d23e4f7517b8a6c721100288311fa5" default))
+   '("e7820b899036ae7e966dcaaec29fd6b87aef253748b7de09e74fdc54407a7a02"
+     "1781e8bccbd8869472c09b744899ff4174d23e4f7517b8a6c721100288311fa5"
+     default))
  '(org-link-file-path-type 'relative)
  '(package-selected-packages
-   '(nano company-ledger prettier ledger-mode git-auto-commit-mode git-timemachine org-roam helm-swoop helm-ag use-package smooth-scrolling olivetti)))
+   '(company-ledger git-auto-commit-mode git-timemachine helm-ag
+                    helm-swoop ledger-mode nano olivetti org-roam
+                    prettier smooth-scrolling undo-tree use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
