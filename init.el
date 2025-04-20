@@ -208,7 +208,8 @@
  '(package-selected-packages
    '(company-ledger git-auto-commit-mode git-timemachine helm-ag
                     helm-swoop ledger-mode nano olivetti org-roam
-                    prettier smooth-scrolling undo-tree use-package))
+                    prettier smooth-scrolling ultra-scroll undo-tree
+                    use-package))
  '(package-vc-selected-packages
    '((ultra-scroll :url "https://github.com/jdtsmith/ultra-scroll"))))
 (custom-set-faces
