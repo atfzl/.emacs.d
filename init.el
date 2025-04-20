@@ -99,12 +99,13 @@
         scroll-margin 0) 
   :config
   (ultra-scroll-mode 1))
-(use-package smooth-scrolling
-  :ensure t
-  :init
-  (smooth-scrolling-mode 1)
-  (setq smooth-scroll-margin 5)
-  )
+
+;; (use-package smooth-scrolling
+;;   :ensure t
+;;   :init
+;;   (smooth-scrolling-mode 1)
+;;   (setq smooth-scroll-margin 5)
+;;   )
 
 (use-package projectile
   :ensure t
