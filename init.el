@@ -93,18 +93,18 @@
   )
 
 (use-package ultra-scroll
+  :vc (:url "https://github.com/jdtsmith/ultra-scroll") ; For Emacs>=30
   :init
   (setq scroll-conservatively 101 ; important!
         scroll-margin 0) 
   :config
   (ultra-scroll-mode 1))
-
-;; (use-package smooth-scrolling
-;;   :ensure t
-;;   :init
-;;   (smooth-scrolling-mode 1)
-;;   (setq smooth-scroll-margin 5)
-;;   )
+(use-package smooth-scrolling
+  :ensure t
+  :init
+  (smooth-scrolling-mode 1)
+  (setq smooth-scroll-margin 5)
+  )
 
 (use-package projectile
   :ensure t
