@@ -12,7 +12,7 @@
 (scroll-bar-mode -1)
 (global-visual-line-mode)
 ;; window size
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 ;; use space instead of tab for indentation
 (setq-default indent-tabs-mode nil)
 ;; tab width global
