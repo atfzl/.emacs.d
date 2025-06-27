@@ -34,17 +34,6 @@
   (find-file "~/.emacs.d/init.el")
   )
 
-;; Ctrl-K with no kill
-(defun delete-line-no-kill ()
-  "Do not cut line with Control-k, just remove it."
-  (interactive)
-  (delete-region
-   (point)
-   (save-excursion (move-end-of-line 1) (point)))
-  (delete-char 1)
-  )
-(global-set-key (kbd "C-k") 'delete-line-no-kill)
-
 ;;; from melpa
 ;;;
 
