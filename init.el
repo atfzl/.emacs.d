@@ -12,7 +12,6 @@
 
 (setq inhibit-startup-screen t)
 (load-theme 'leuven t)
-(setq org-startup-with-inline-images t)
 (set-frame-font "JetBrains Mono 14" nil t)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
