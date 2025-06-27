@@ -3,6 +3,13 @@
              '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(eval-when-compile
+  (require 'use-package))
+
 (setq inhibit-startup-screen t)
 (load-theme 'leuven t)
 (add-hook 'org-mode-hook #'org-indent-mode)
@@ -193,16 +200,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("e7820b899036ae7e966dcaaec29fd6b87aef253748b7de09e74fdc54407a7a02"
-     "1781e8bccbd8869472c09b744899ff4174d23e4f7517b8a6c721100288311fa5"
-     default))
- '(org-link-file-path-type 'relative)
- '(package-selected-packages
-   '(company-ledger git-auto-commit-mode git-timemachine helm-ag
-                    helm-swoop ledger-mode nano olivetti org-roam
-                    prettier smooth-scrolling ultra-scroll undo-tree
-                    use-package))
  '(package-vc-selected-packages
    '((ultra-scroll :url "https://github.com/jdtsmith/ultra-scroll"))))
 (custom-set-faces
