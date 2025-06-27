@@ -11,6 +11,7 @@
   (require 'use-package))
 
 (setq inhibit-startup-screen t)
+
 (load-theme 'leuven t)
 
 (set-frame-font "JetBrains Mono 14" nil t)
