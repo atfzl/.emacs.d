@@ -12,29 +12,17 @@
 
 (setq inhibit-startup-screen t)
 (load-theme 'leuven t)
-(add-hook 'org-mode-hook #'org-indent-mode)
 (setq org-startup-with-inline-images t)
 (set-frame-font "JetBrains Mono 14" nil t)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (global-visual-line-mode)
-;; window size
-;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
-;; use space instead of tab for indentation
-(setq-default indent-tabs-mode nil)
-;; tab width global
-(setq-default tab-width 2)
-;; Don't save backup files
-(setq make-backup-files nil)
-;; writing yes or no is length, type y / n instead
-(defalias 'yes-or-no-p 'y-or-n-p)
-;; show the cursor like this |
-(setq-default cursor-type 'bar)
+
 (setq-default show-trailing-whitespace t)
+
 ;; Disable the annoying alarms
 (setq ring-bell-function 'ignore)
-;; refresh buffers automatically if changed by ext program
-(global-auto-revert-mode 1)
+
 ;; buffer path in bar
 (setq frame-title-format
       '((:eval (if (buffer-file-name)
