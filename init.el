@@ -19,6 +19,16 @@
 (scroll-bar-mode -1)
 (global-visual-line-mode)
 
+;; Don't save backup files
+(setq make-backup-files nil)
+;; writing yes or no is length, type y / n instead
+(defalias 'yes-or-no-p 'y-or-n-p)
+;; refresh buffers automatically if changed by ext program
+(global-auto-revert-mode 1)
+
+;; show the cursor like this |
+(setq-default cursor-type 'bar)
+
 (setq-default show-trailing-whitespace t)
 
 ;; Disable the annoying alarms
