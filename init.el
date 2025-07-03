@@ -17,7 +17,8 @@
 (set-frame-font "JetBrains Mono 14" nil t)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(global-visual-line-mode)
+
+(setq-default truncate-lines t)
 
 ;; Don't save backup files
 (setq make-backup-files nil)
@@ -26,13 +27,18 @@
 ;; refresh buffers automatically if changed by ext program
 (global-auto-revert-mode 1)
 
-;; show the cursor like this |
-(setq-default cursor-type 'bar)
-
 (setq-default show-trailing-whitespace t)
 
 ;; Disable the annoying alarms
 (setq ring-bell-function 'ignore)
+
+;; Switch windows with S-<left>, S-<right>, S-<up>, S-<down>
+(windmove-default-keybindings)
+
+(setq default-frame-alist
+      '(
+	(width . 148)
+	(height . 50)))
 
 ;; buffer path in bar
 (setq frame-title-format
@@ -47,6 +53,14 @@
 
 ;;; from melpa
 ;;;
+
+(use-package treesit-auto
+  :ensure t
+  :custom
+  (treesit-auto-install 'prompt)
+  :config
+  (treesit-auto-add-to-auto-mode-alist 'all)
+  (global-treesit-auto-mode))
 
 (use-package undo-tree
   :ensure t
@@ -133,3 +147,17 @@
   (define-key helm-multi-swoop-map (kbd "C-s") 'helm-next-line)
   )
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(global-subword-mode t)
+ )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(put 'scroll-left 'disabled nil)
