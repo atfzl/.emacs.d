@@ -51,6 +51,15 @@
   (find-file "~/.emacs.d/init.el")
   )
 
+(add-hook 'org-mode-hook
+  (lambda ()
+   ;; Enable automatic indentation of headlines and text
+    (org-indent-mode 1)
+
+    (olivetti-mode 1)
+    )
+  )
+
 ;;; from melpa
 ;;;
 
@@ -99,6 +108,9 @@
   :ensure t
   )
 
+(use-package olivetti
+  :ensure t)
+
 (use-package helm
   :ensure t
   :init
@@ -116,6 +128,7 @@
 
   (helm-mode 1)
   (helm-autoresize-mode t)
+  (setq helm-move-to-line-cycle-in-source nil)
 
   (global-set-key (kbd "C-x b") 'helm-mini)
   (global-set-key (kbd "C-x C-b") 'helm-mini)
@@ -153,7 +166,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(global-subword-mode t)
- )
+ '(package-selected-packages
+   '(helm-ag helm-projectile helm-swoop lsp-mode olivetti
+     treesit-auto ultra-scroll undo-tree)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
