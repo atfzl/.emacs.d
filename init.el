@@ -63,14 +63,6 @@
 ;;; from melpa
 ;;;
 
-(use-package treesit-auto
-  :ensure t
-  :custom
-  (treesit-auto-install 'prompt)
-  :config
-  (treesit-auto-add-to-auto-mode-alist 'all)
-  (global-treesit-auto-mode))
-
 (use-package undo-tree
   :ensure t
   :config
@@ -166,9 +158,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(global-subword-mode t)
- '(package-selected-packages
-   '(helm-ag helm-projectile helm-swoop lsp-mode olivetti
-     treesit-auto ultra-scroll undo-tree)))
+ '(package-selected-packages nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
